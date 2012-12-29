@@ -1,15 +1,14 @@
 %define module prettytable
 Name:           python-prettytable
-Version:        0.5
-Release:        %mkrel 1
+Version:        0.6.1
+Release:        1
 Summary:        Python library for displaying data in ASCII table format
 License:        BSD
 Group:          Development/Python
 URL:            http://code.google.com/p/prettytable/
-Source0:        http://pypi.python.org/packages/source/P/PrettyTable/prettytable-%{version}.tar.gz
+Source0:        http://pypi.python.org/packages/source/P/PrettyTable/prettytable-%{version}.tar.bz2
 BuildRequires:  python-devel
 Buildrequires:	python-setuptools
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildArch:      noarch
 
 %description
@@ -29,11 +28,9 @@ row range.
 CFLAGS="%{optflags}" python setup.py build
 
 %install
-rm -rf $RPM_BUILD_ROOT
-%{__python} setup.py install --root $RPM_BUILD_ROOT --install-purelib=%{python_sitelib}
+%{__python} setup.py install --root %{buildroot} --install-purelib=%{python_sitelib}
 
 %clean
-rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
@@ -49,4 +46,5 @@ rm -rf %{buildroot}
 
 * Wed Jun 8 2011 Antoine Ginies <aginies@mandriva.com> 0.5
 - first release for Mandriva 
+
 
