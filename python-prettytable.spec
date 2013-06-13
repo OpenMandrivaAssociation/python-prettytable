@@ -1,6 +1,6 @@
 %define module prettytable
 Name:           python-prettytable
-Version:        0.6.1
+Version:        0.7.1
 Release:        1
 Summary:        Python library for displaying data in ASCII table format
 License:        BSD
@@ -46,5 +46,6 @@ CFLAGS="%{optflags}" python setup.py build
 
 * Wed Jun 8 2011 Antoine Ginies <aginies@mandriva.com> 0.5
 - first release for Mandriva 
+
 
 
