@@ -1,5 +1,6 @@
 removed_sources:
   prettytable-0.5.tar.gz: 81a4746d9974d07af21d840ab01c636941ad771c
   prettytable-0.6.1.tar.bz2: 0351f15a577f269c8704c52d22faa4af7a6b01b1
-sources:
   prettytable-0.7.1.tar.bz2: ad346a18d92c1d95f2295397c7a8a4f489e48851
+sources:
+  prettytable-0.7.2.tar.gz: b7d0bf0feee0d23108a044ffae44aff5c5935250
