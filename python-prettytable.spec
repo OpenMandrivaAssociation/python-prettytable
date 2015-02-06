@@ -1,7 +1,7 @@
 %define module prettytable
 Name:           python-prettytable
 Version:        0.7.2
-Release:        1
+Release:        2
 Summary:        Python library for displaying data in ASCII table format
 
 License:        BSD
