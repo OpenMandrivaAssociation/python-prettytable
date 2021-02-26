@@ -8,6 +8,7 @@ License: Apache 2.0
 Group: System/Libraries
 BuildArch: noarch
 BuildRequires: python python-setuptools
+BuildRequires: python-pip python-wheel
 
 %description
 A simple Python library for easily displaying tabular data in a visually
