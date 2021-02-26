@@ -1,41 +1,27 @@
-%define module prettytable
-Name:           python-prettytable
-Version:        0.7.2
-Release:        2
-Summary:        Python library for displaying data in ASCII table format
-
-License:        BSD
-Group:          Development/Python
-URL:            http://code.google.com/p/prettytable/
-Source0:        http://pypi.python.org/packages/source/P/PrettyTable/prettytable-%{version}.tar.gz
-BuildRequires:  python-devel
-Buildrequires:	python-setuptools
-BuildArch:      noarch
+Name: python-prettytable
+Version: 2.0.0
+Release: 1
+Source0: https://files.pythonhosted.org/packages/source/p/prettytable/prettytable-%{version}.tar.gz
+Summary: Python library for displaying tabular data in an ASCII table format
+URL: https://pypi.org/project/prettytable/
+License: Apache 2.0
+Group: System/Libraries
+BuildArch: noarch
+BuildRequires: python python-setuptools
 
 %description
-PrettyTable is a simple Python library designed to make
- it quick and easy to represent tabular data in visually
-appealing ASCII tables. It was inspired by the ASCII
-tables used in the PostgreSQL shell psql. PrettyTable
-allows for selection of which columns are to be printed,
-independent alignment of columns (left or right justified
-or centred) and printing of "sub-tables" by specifying a
-row range.
+A simple Python library for easily displaying tabular data in a visually
+appealing ASCII table format
 
 %prep
-%setup -q -n %{module}-%{version}
+%autosetup -p1 -n prettytable-%{version}
 
 %build
-CFLAGS="%{optflags}" python setup.py build
+python setup.py build
 
 %install
-python setup.py install --root %{buildroot} --install-purelib=%{py_puresitedir}
-
-%clean
+PYTHONDONTWRITEBYTECODE= python setup.py install --root=%{buildroot}
 
 %files
-%{py_puresitedir}/*
-
-
-
-
+%{py_puresitedir}/prettytable
+%{py_puresitedir}/*.egg-info
