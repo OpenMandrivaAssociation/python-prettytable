@@ -1,5 +1,5 @@
 Name: python-prettytable
-Version: 3.17.0
+Version: 3.18.0
 Release: 1
 Source0: https://files.pythonhosted.org/packages/source/p/prettytable/prettytable-%{version}.tar.gz
 Summary: Python library for displaying tabular data in an ASCII table format
