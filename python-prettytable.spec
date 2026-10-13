@@ -17,6 +17,9 @@ BuildRequires: python%{pyver}dist(wheel)
 A simple Python library for easily displaying tabular data in a visually
 appealing ASCII table format
 
+%build -p
+export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
+
 %files
 %{py_puresitedir}/prettytable
 %{py_puresitedir}/prettytable-%{version}.dist-info
